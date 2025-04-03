@@ -1,5 +1,5 @@
 export const heroDetails = {
-    heading: 'Smart, Secure, Simple Financial Management',
-    subheading: 'From effortless budgeting to real-time investment insights, Finwise puts you in control of your money like never before',
-    centerImageSrc: '/images/hero-mockup.webp',
-}
+    heading: 'Juntos contra a malária: previna, alerte, combata!',
+    subheading: 'O objetivo  de  combater  a  malária  em  comunidades  vulneráveis  por  meio  de monitoramento em tempo real e prevenção proativa',
+    centerImageSrc: '/images/hero-mockup.png',
+} 

@@ -1,12 +1,12 @@
 export const siteDetails = {
-    siteName: 'Finwise',
-    siteUrl: 'https://finwise-omega.vercel.app/',
+    siteName: 'MapazZZ',
+    siteUrl: 'https://mapazzz.vercel.app/',
     metadata: {
-        title: 'Finwise - Next.js and Tailwind CSS Landing Page Template',
-        description: 'Finwise empowers businesses with cutting-edge technology solutions to drive success and efficiency.',
+        title: 'MapazZZ - Juntos contra a malária: previna, alerte, combata!',
+        description: 'O MapaZZZ é um aplicativo móvel desenvolvido para monitoramento e prevenção da malária em tempo real, utilizando dados georreferenciados e inteligência colaborativa.',
     },
     language: 'en-us',
     locale: 'en-US',
-    siteLogo: `${process.env.BASE_PATH || ''}/images/logo.png`, // or use a string for the logo e.g. "TechStartup"
-    googleAnalyticsId: '', // e.g. G-XXXXXXX,
+    siteLogo: `${process.env.BASE_PATH || ''}/images/logo.png`, 
+    googleAnalyticsId: '',
 }

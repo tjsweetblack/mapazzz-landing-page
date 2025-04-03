@@ -7,31 +7,22 @@ export const footerDetails: {
     telephone: string;
     socials: ISocials;
 } = {
-    subheading: "Empowering businesses with cutting-edge financial technology solutions.",
-    quickLinks: [
+    subheading: "O MapaZZZ é um aplicativo móvel desenvolvido para monitoramento e prevenção da malária em tempo real.",
+    quickLinks: [ 
         {
-            text: "Features",
-            url: "#features"
+            text: "Documentação",
+            url: "#"
         },
         {
-            text: "Pricing",
-            url: "#pricing"
-        },
-        {
-            text: "Testimonials",
-            url: "#testimonials"
+            text: "API",
+            url: "#"
         }
     ],
-    email: 'address@yoursite.com',
-    telephone: '+1 (123) 456-7890',
+    email: 'info@mapazz.ao',
+    telephone: '+244 999 999 999',
     socials: {
-        // github: 'https://github.com',
-        // x: 'https://twitter.com/x',
-        twitter: 'https://twitter.com/Twitter',
-        facebook: 'https://facebook.com',
-        // youtube: 'https://youtube.com',
+        facebook: 'https://facebook.com', 
         linkedin: 'https://www.linkedin.com',
-        // threads: 'https://www.threads.net',
         instagram: 'https://www.instagram.com',
     }
 }
