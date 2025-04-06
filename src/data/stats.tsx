@@ -1,22 +1,22 @@
-import { BsBarChartFill, BsFillStarFill } from "react-icons/bs";
+import { BsBarChartFill, BsFillClipboard2PulseFill } from "react-icons/bs";
 import { PiGlobeFill } from "react-icons/pi";
 
 import { IStats } from "@/types";
 
 export const stats: IStats[] = [
     {
-        title: "20M+",
+        title: "200M+",
         icon: <BsBarChartFill size={34} className="text-blue-500" />,
-        description: "Transactions processed securely every day, providing real-time insights."
+        description: "219 milhões de casos foram registrados em 2019, de acordo com a Organização Mundial da Saúde (OMS)."
     },
     {
-        title: "5.0",
-        icon: <BsFillStarFill size={34} className="text-yellow-500" />,
-        description: "Star rating, consistently maintained across app stores."
+        title: "435mil",
+        icon: <BsFillClipboard2PulseFill size={34} className="text-yellow-500" />,
+        description: "435 mil pessoas morrem todos os anos por causa da malária. Essas mortes são, em sua maioria"
     },
     {
-        title: "200+ ",
+        title: "90% ",
         icon: <PiGlobeFill size={34} className="text-green-600" />,
-        description: "Financial Institutions, seamlessly integrated, so you can manage all accounts."
+        description: "A maior parte das vítimas são crianças pequenas, evidenciando a urgência de ações de prevenção."
     }
 ];

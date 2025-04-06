@@ -1,72 +1,50 @@
-import { FiBarChart2, FiBriefcase, FiDollarSign, FiLock, FiPieChart, FiShield, FiTarget, FiTrendingUp, FiUser } from "react-icons/fi";
+import { FiBarChart2, FiBriefcase, FiDollarSign, FiPieChart, FiTarget, FiTrendingUp } from "react-icons/fi";
 
 import { IBenefit } from "@/types"
 
 export const benefits: IBenefit[] = [
     {
-        title: "Smart Budgeting",
-        description: "Take the guesswork out of managing your money. Our AI-powered budgeting tool adapts to your lifestyle and helps you stay on track.",
+        title: "Juntos Contra a Malária",
+        description: "A malária ainda é uma ameaça real, mas você pode fazer a diferença! Com o MapaZZZ, transformar sua comunidade em um espaço mais seguro está ao alcance das suas mãos.",
         bullets: [
             {
-                title: "Intelligent Categorization",
-                description: "Automatically sorts your transactions for crystal-clear insights.",
+                title: "Reporte de Zonas de Risco",
+                description: "Os usuários podem denunciar locais com risco de malária, como água parada e lixo acumulado.",
                 icon: <FiBarChart2 size={26} />
             },
             {
-                title: "Customizable Goals",
-                description: "Set and track financial objectives that matter to you.",
+                title: "Notificações Inteligentes",
+                description: "Envia alertas em tempo real para avisar sobre:Novos focos de risco próximos ao usuário,Áreas com surto ativo.",
                 icon: <FiTarget size={26} />
             },
             {
-                title: "Predictive Analysis",
-                description: "Get ahead of your finances with spending forecasts and alerts.",
+                title: "Sistema de Pontuação e Gamificação",
+                description: "Os pontos podem ser trocados por medalhas e benefícios",
                 icon: <FiTrendingUp size={26} />
             }
         ],
         imageSrc: "/images/mockup-1.png"
     },
     {
-        title: "Seamless Investing",
-        description: "Start building wealth today, no financial degree required. Finwise makes investing accessible and straightforward.",
+        title: "Tecnologia a favor da saúde pública",
+        description: "O MapaZZZ combina geolocalização, inteligência coletiva e dados em tempo real para prevenir surtos de malária.",
         bullets: [
             {
-                title: "Micro-Investing",
-                description: "Begin with as little as $1 and watch your money grow.",
+                title: "Acesso gratuito",
+                description: "O MapaZZZ é totalmente gratuito para todos os usuários. Qualquer pessoa pode baixar o app.",
                 icon: <FiDollarSign size={26} />
             },
             {
-                title: "Expert Portfolios",
-                description: "Choose from investment strategies tailored to your risk tolerance.",
+                title: "Notificações inteligentes",
+                description: "Receba alertas em tempo real baseados na sua localização. Seja avisado quando houver risco próximo.",
                 icon: <FiBriefcase size={26} />
             },
             {
-                title: "Real-Time Performance",
-                description: "Track your investments with easy-to-understand metrics and visuals.",
+                title: " Dados confiáveis para governos e ONGs",
+                description: "As informações coletadas pela comunidade são organizadas e disponibilizadas através de uma API restrita para instituições de saúde.",
                 icon: <FiPieChart size={26} />
             }
         ],
         imageSrc: "/images/mockup-2.png"
-    },
-    {
-        title: "Bank-Grade Security",
-        description: "Your financial data deserves the best protection. Rest easy knowing Finwise employs cutting-edge security measures.",
-        bullets: [
-            {
-                title: "Military-Grade Encryption",
-                description: "Your information is safeguarded with the highest level of encryption.",
-                icon: <FiLock size={26} />
-            },
-            {
-                title: "Biometric Authentication",
-                description: "Access your account securely with fingerprint or facial recognition.",
-                icon: <FiUser size={26} />
-            },
-            {
-                title: "Real-Time Fraud Detection",
-                description: "Our system constantly monitors for suspicious activity to keep your money safe.",
-                icon: <FiShield size={26} />
-            }
-        ],
-        imageSrc: "/images/mockup-1.png"
     },
 ]

@@ -1,25 +1,36 @@
 import { IFAQ } from "@/types";
-import { siteDetails } from "./siteDetails";
 
 export const faqs: IFAQ[] = [
     {
-        question: `Is ${siteDetails.siteName} secure?`,
-        answer: 'Absolutely. We use bank-level encryption to protect your data and never store your login information. Plus, our biometric authentication adds an extra layer of security.',
+        question: `O MapazZZ é seguro?`,
+        answer: 'O MapaZZZ é um aplicativo móvel desenvolvido para monitoramento e prevenção da malária em tempo real. Ele utiliza dados georreferenciados e inteligência colaborativa para alertar sobre focos de risco e auxiliar no combate à doença.',
     },
     {
-        question: `Can I use ${siteDetails.siteName} on multiple devices?`,
-        answer: 'Absolutely! Your Finwise account syncs seamlessly across all your devices - smartphone, tablet, and computer.',
+        question: `Como funciona o mapa de calor?`,
+        answer: "O mapa de calor mostra áreas com diferentes níveis de risco de malária, variando entre:Baixo risco (Vermelho claro) – Poucos relatos, apenas vigilância passiva.Médio risco (Vermelho médio) – Relatos frequentes, necessidade de controle preventivo.Alto risco (Vermelho escuro) – Casos confirmados, necessidade de ação emergencial.Muito alto risco (Vermelho muito escuro) – Surto ativo, controle intensivo necessário.",
     },
     {
-        question: 'Can I connect all my bank accounts?',
-        answer: `Yes! ${siteDetails.siteName} supports connections with over 10,000 financial institutions worldwide. Simply log in through our secure portal to link your accounts.`
+        question: 'Como posso reportar um foco de risco?',
+        answer: `Para relatar um foco de risco, basta acessar o formulário no app e fornecer:
+
+Tipo de risco (ex.: água parada, lixo acumulado)
+
+Foto com geolocalização
+
+Descrição opcional
+
+Se houver um relatório recente na mesma área, você pode confirmar o risco ou indicar que foi resolvido.`
     },
     {
-        question: 'Do I need any financial expertise to use the investing features?',
-        answer: 'Not at all! Our expert-curated portfolios and educational resources make investing accessible to everyone, regardless of experience level.',
-    },
-    {
-        question: 'What if I need help using the app?',
-        answer: 'Our dedicated support team is available 24/7 via chat or email. Plus, we offer extensive in-app tutorials and a comprehensive knowledge base to help you make the most of Finwise.'
+        question: 'Como funciona o sistema de pontuação?',
+        answer: `Você ganha pontos ao interagir no aplicativo:
+
+10 pontos – Ao enviar um reporte.
+
+30 pontos – Quando seu reporte é validado por outros usuários.
+
+100 pontos – Quando um risco é eliminado e comprovado.
+
+Esses pontos podem ser trocados por medalhas e benefícios, como cupons de parceiros.`,
     }
 ];

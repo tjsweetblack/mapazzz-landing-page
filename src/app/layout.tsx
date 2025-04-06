@@ -27,13 +27,7 @@ export const metadata: Metadata = {
         alt: siteDetails.siteName,
       },
     ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: siteDetails.metadata.title,
-    description: siteDetails.metadata.description,
-    images: ['/images/twitter-image.jpg'],
-  },
+  }
 };
 
 export default function RootLayout({
@@ -48,6 +42,7 @@ export default function RootLayout({
       >
         {siteDetails.googleAnalyticsId && <GoogleAnalytics gaId={siteDetails.googleAnalyticsId} />}
         <Header />
+        
         <main>
           {children}
         </main>
