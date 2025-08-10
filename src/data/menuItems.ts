@@ -6,11 +6,7 @@ export const menuItems: IMenuItem[] = [
         url: "/"
     },
     {
-        text: "Zonas de Risco",
+        text: "Instituições",
         url: "zonas"
-    },
-    {
-        text: "Reportagens",
-        url: "reports"
     }
 ];
