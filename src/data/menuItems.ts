@@ -7,6 +7,6 @@ export const menuItems: IMenuItem[] = [
     },
     {
         text: "Instituições",
-        url: "zonas"
+        url: "#"
     }
 ];
