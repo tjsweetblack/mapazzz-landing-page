@@ -11,89 +11,110 @@ import Container from './Container';
 import { siteDetails } from '@/data/siteDetails';
 import { menuItems } from '@/data/menuItems';
 
+// Header component for navigation
 const Header: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
 
+    // Toggle mobile menu visibility
     const toggleMenu = () => {
-        setIsOpen(!isOpen);
+        setIsOpen((prev) => !prev);
     };
 
     return (
-        <header className="bg-transparent fixed top-0 left-0 right-0 md:absolute z-50 mx-auto w-full">
-            <Container className="!px-0">
-                <nav className="shadow-md md:shadow-none bg-white md:bg-transparent mx-auto flex justify-between items-center py-1 px-5 md:py-5">
-                    <Link href="/" className="flex items-center gap-2">
-                        <Image src={IconLogo} alt="Site Logo" width={60} height={60} />
-                        <span className="manrope text-xl font-semibold text-foreground cursor-pointer">
+        <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm">
+            <Container className="px-4 md:px-6 ">
+                <nav className="flex items-center justify-between py-4 md:py-6">
+                    {/* Logo and Site Name */}
+                    <Link href="/" className="flex items-center gap-2" aria-label={`${siteDetails.siteName} homepage`}>
+                        <Image
+                            src={IconLogo}
+                            alt={`${siteDetails.siteName} Logo`}
+                            width={60}
+                            height={60}
+                            priority
+                            className="object-contain"
+                        />
+                        <span className="text-xl font-bold text-red-700 uppercase md:text-2xl">
                             {siteDetails.siteName}
                         </span>
                     </Link>
 
                     {/* Desktop Menu */}
-                    <ul className="hidden md:flex space-x-8">
-                        {menuItems.map(item => (
+                    <ul className="hidden items-center space-x-8 md:flex uppercase">
+                        {menuItems.map((item) => (
                             <li key={item.text}>
-                                <Link href={item.url} className="text-foreground hover:text-foreground-accent font-bold transition-colors">
+                                <Link
+                                    href={item.url}
+                                    className="text-gray-700 hover:text-red-600 font-medium transition-colors duration-200"
+                                >
                                     {item.text}
                                 </Link>
                             </li>
                         ))}
                         <li>
-                            <Link href="/docsapi" className="text-white font-bold bg-primary px-8 py-3 transition-colors">
-                            Documentação API
+                            <Link
+                                href="docsapi"
+                                className="inline-block rounded-md bg-red-600 px-6 py-2 text-white font-medium hover:bg-red-700 transition-colors duration-200"
+                            >
+                                Documentação API
                             </Link>
                         </li>
                     </ul>
 
                     {/* Mobile Menu Button */}
-                    <div className="md:hidden flex items-center">
-                        <button
-                            onClick={toggleMenu}
-                            type="button"
-                            className="bg-primary text-white focus:outline-none rounded-full w-10 h-10 flex items-center justify-center"
-                            aria-controls="mobile-menu"
-                            aria-expanded={isOpen}
-                        >
-                            {isOpen ? (
-                                <HiOutlineXMark className="h-6 w-6" aria-hidden="true" />
-                            ) : (
-                                <HiBars3 className="h-6 w-6" aria-hidden="true" />
-                            )}
-                            <span className="sr-only">Toggle navigation</span>
-                        </button>
-                    </div>
+                    <button
+                        onClick={toggleMenu}
+                        type="button"
+                        className="md:hidden p-2 text-gray-700 hover:text-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 rounded-full"
+                        aria-controls="mobile-menu"
+                        aria-expanded={isOpen}
+                        aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
+                    >
+                        {isOpen ? (
+                            <HiOutlineXMark className="h-6 w-6" aria-hidden="true" />
+                        ) : (
+                            <HiBars3 className="h-6 w-6" aria-hidden="true" />
+                        )}
+                    </button>
                 </nav>
-            </Container>
-            <hr />
-            {/* Mobile Menu with Transition */}
-            <Transition
-                show={isOpen}
-                enter="transition ease-out duration-200 transform"
-                enterFrom="opacity-0 scale-95"
-                enterTo="opacity-100 scale-100"
-                leave="transition ease-in duration-75 transform"
-                leaveFrom="opacity-100 scale-100"
-                leaveTo="opacity-0 scale-95"
-            >
-                <div id="mobile-menu" className="md:hidden bg-white shadow-lg">
-                    <ul className="flex flex-col space-y-4 pt-1 pb-6 px-6">
-                        {menuItems.map(item => (
-                            <li key={item.text}>
-                                <Link href={item.url} className="text-foreground hover:text-primary block" onClick={toggleMenu}>
-                                    {item.text}
+
+                {/* Mobile Menu with Transition */}
+                <Transition
+                    show={isOpen}
+                    enter="transition ease-out duration-200 transform"
+                    enterFrom="opacity-0 -translate-y-2"
+                    enterTo="opacity-100 translate-y-0"
+                    leave="transition ease-in duration-150 transform"
+                    leaveFrom="opacity-100 translate-y-0"
+                    leaveTo="opacity-0 -translate-y-2"
+                >
+                    <div id="mobile-menu" className="md:hidden bg-white shadow-lg border-t border-gray-100">
+                        <ul className="flex flex-col space-y-3 p-6">
+                            {menuItems.map((item) => (
+                                <li key={item.text}>
+                                    <Link
+                                        href={item.url}
+                                        className="text-gray-700 hover:text-blue-600 font-medium block"
+                                        onClick={toggleMenu}
+                                    >
+                                        {item.text}
+                                    </Link>
+                                </li>
+                            ))}
+                            <li>
+                                <Link
+                                    href="/docsapi"
+                                    className="inline-block rounded-md bg-blue-600 px-6 py-2 text-white font-medium hover:bg-blue-700 transition-colors duration-200"
+                                    onClick={toggleMenu}
+                                >
+                                    Documentação API
                                 </Link>
                             </li>
-                        ))}
-                        <li>
-                            <Link href="/docsapi" className="text-white bg-primary hover:bg-primary-accent px-5 py-2 block w-fit" onClick={toggleMenu}>
-                            Documentação API
-                            </Link>
-                        </li>
-                    </ul>
-                </div>
-            </Transition>
-        
-        </header>  
+                        </ul>
+                    </div>
+                </Transition>
+            </Container>
+        </header>
     );
 };
 

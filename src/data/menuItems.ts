@@ -7,6 +7,6 @@ export const menuItems: IMenuItem[] = [
     },
     {
         text: "Instituições",
-        url: "#"
+        url: "https://burger-order-screen.vercel.app/"
     }
 ];
