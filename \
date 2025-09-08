@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/instu",
+      "destination": "https://your-web-app-project-name.vercel.app/"
+    },
+    {
+      "source": "/instu/(.*)",
+      "destination": "https://your-web-app-project-name.vercel.app/$1"
+    }
+  ]
+}

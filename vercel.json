@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/instu",
+      "destination": "https://burger-order-screen.vercel.app/"
+    },
+    {
+      "source": "/instu/(.*)",
+      "destination": "https://burger-order-screen.vercel.app/$1"
+    }
+  ]
+}
