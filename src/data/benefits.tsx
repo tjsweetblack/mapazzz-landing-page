@@ -1,4 +1,4 @@
-import { FiBarChart2, FiBriefcase, FiDollarSign, FiPieChart, FiTarget, FiTrendingUp } from "react-icons/fi";
+import { FiBarChart2, FiTarget, FiTrendingUp } from "react-icons/fi";
 import { IBenefit } from "@/types";
 
 export const benefits: Record<"pt" | "en" | "jp", IBenefit[]> = {

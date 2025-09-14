@@ -1,8 +1,7 @@
 "use client";
 
 import { useLanguage } from "@/context/LanguageContext";
-import { siteDetails } from "@/data/siteDetails";
-import { footerDetails } from "@/data/footer";
+import { siteDetails } from "@/data/siteDetails"; 
 
 const Footer: React.FC = () => {
   const { language } = useLanguage();

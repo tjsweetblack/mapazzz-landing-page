@@ -1,9 +1,7 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
-import AppStoreButton from './AppStoreButton';
-import PlayStoreButton from './PlayStoreButton';
+import Image from 'next/image';  
 import { heroDetails } from '@/data/hero';
 import { useLanguage } from '@/context/LanguageContext';
  

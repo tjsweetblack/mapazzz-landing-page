@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { Source_Sans_3, Manrope } from "next/font/google";
-
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+ 
 import { siteDetails } from '@/data/siteDetails';
 import { LanguageProvider } from "@/context/LanguageContext";
 import "./globals.css";
