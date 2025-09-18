@@ -28,14 +28,14 @@ const handleSubmit = async () => {
     "https://docs.google.com/forms/d/e/1FAIpQLSdX_C1E_SkPyoPcFO44EWdMFuf12hijHW5AhE0iNhF0bTPc5g/formResponse";
 
   const formData = new FormData();
-  formData.append("entry.1490734690", email);    // Email
-  formData.append("entry.453478170", question);  // Pergunta
+  formData.append("entry.1490734690", email);   
+  formData.append("entry.453478170", question); 
 
   try {
     await fetch(formUrl, {
       method: "POST",
       body: formData,
-      mode: "no-cors", // necessário para Google Forms
+      mode: "no-cors",  
     });
 
     alert("Pergunta enviada com sucesso!");
