@@ -18,7 +18,7 @@ export const benefits: Record<"pt" | "en" | "jp", IBenefit[]> = {
           icon: <FiTarget size={26} />
         },
         {
-          title: "Sistema de Pontuação e Gamificação",
+          title: "Sistema de Pontuação e Premiação",
           description: "Os pontos podem ser trocados por medalhas e benefícios.",
           icon: <FiTrendingUp size={26} />
         }
@@ -43,7 +43,7 @@ export const benefits: Record<"pt" | "en" | "jp", IBenefit[]> = {
           icon: <FiTarget size={26} />
         },
         {
-          title: "Scoring & Gamification System",
+          title: "Scoring & Awards",
           description: "Points can be exchanged for medals and benefits.",
           icon: <FiTrendingUp size={26} />
         }

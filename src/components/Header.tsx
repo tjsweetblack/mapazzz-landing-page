@@ -8,13 +8,13 @@ import { siteDetails } from "@/data/siteDetails";
 import { useLanguage } from "@/context/LanguageContext";
 import LanguageModal from "./LanguageModal";
 import { menuItems } from "@/data/menuItems";
-import { Menu, X } from "lucide-react"; // Ícones de menu e fechar
+import { Menu, X } from "lucide-react"; 
 
-const IconLogo: string = "/images/icon.png";
+const IconLogo: string = "/images/logo_icon.png";
 
 const Header: React.FC = () => {
   const [open, setOpen] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false); // estado do menu mobile
+  const [mobileOpen, setMobileOpen] = useState(false); 
   const { language } = useLanguage();
   const [isClient, setIsClient] = useState(false);
 
@@ -31,10 +31,8 @@ const Header: React.FC = () => {
           <nav className="flex items-center justify-between py-4 md:py-6">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2">
-              <Image src={IconLogo} alt="Logo" width={50} height={50} />
-              <span className="text-xl font-bold text-red-700 uppercase md:text-2xl">
-                {siteDetails.siteName}
-              </span>
+              <Image src={IconLogo} alt="Logo" width={200} height={200} />
+              
             </Link>
 
             {/* Botão do menu mobile */}
