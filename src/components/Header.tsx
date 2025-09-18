@@ -4,7 +4,6 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Container from "./Container";
-import { siteDetails } from "@/data/siteDetails";
 import { useLanguage } from "@/context/LanguageContext";
 import LanguageModal from "./LanguageModal";
 import { menuItems } from "@/data/menuItems";
