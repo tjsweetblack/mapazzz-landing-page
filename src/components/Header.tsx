@@ -8,41 +8,46 @@ import { siteDetails } from "@/data/siteDetails";
 import { useLanguage } from "@/context/LanguageContext";
 import LanguageModal from "./LanguageModal";
 import { menuItems } from "@/data/menuItems";
+import { Menu, X } from "lucide-react"; // Ícones de menu e fechar
 
 const IconLogo: string = "/images/icon.png";
 
 const Header: React.FC = () => {
   const [open, setOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false); // estado do menu mobile
   const { language } = useLanguage();
-  const [isClient, setIsClient] = useState(false); // Estado para verificar se está no cliente
+  const [isClient, setIsClient] = useState(false);
 
-  // Marca que estamos no cliente após a montagem
   useEffect(() => {
     setIsClient(true);
   }, []);
 
-  // Depuração
-  console.log("Idioma no Header:", language);
-
-  // Itens do menu com base no idioma
   const items = menuItems[language as keyof typeof menuItems] || menuItems.en;
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm">
+      <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm shadow-sm">
         <Container className="px-4 md:px-6">
           <nav className="flex items-center justify-between py-4 md:py-6">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2">
-              <Image src={IconLogo} alt="Logo" width={60} height={60} />
+              <Image src={IconLogo} alt="Logo" width={50} height={50} />
               <span className="text-xl font-bold text-red-700 uppercase md:text-2xl">
                 {siteDetails.siteName}
               </span>
             </Link>
 
-            {/* Desktop Menu - Renderiza apenas no cliente */}
+            {/* Botão do menu mobile */}
+            <button
+              className="md:hidden p-2 rounded-lg hover:bg-gray-100"
+              onClick={() => setMobileOpen(!mobileOpen)}
+            >
+              {mobileOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+
+            {/* Desktop Menu */}
             {isClient ? (
-              <ul className="hidden items-center space-x-8 md:flex uppercase">
+              <ul className="hidden md:flex items-center space-x-8 uppercase">
                 {items.map((item) => (
                   <li key={item.text}>
                     <Link
@@ -75,14 +80,49 @@ const Header: React.FC = () => {
                 </li>
               </ul>
             ) : (
-              <ul className="hidden items-center space-x-8 md:flex uppercase">
-                {/* Placeholder para evitar diferença no DOM */}
+              <ul className="hidden md:flex items-center space-x-8 uppercase">
                 <li></li>
                 <li></li>
                 <li></li>
               </ul>
             )}
           </nav>
+
+          {/* Mobile Menu */}
+          {mobileOpen && (
+            <div className="md:hidden mt-2 bg-white rounded-lg shadow-md p-4 space-y-4 uppercase">
+              {items.map((item) => (
+                <Link
+                  key={item.text}
+                  href={item.url}
+                  className="block text-gray-700 hover:text-red-600 font-medium transition-colors duration-200"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {item.text}
+                </Link>
+              ))}
+              <Link
+                href="/docsapi"
+                className="block rounded-md bg-red-600 px-4 py-2 text-white font-medium hover:bg-red-700 text-center"
+                onClick={() => setMobileOpen(false)}
+              >
+                {language === "pt"
+                  ? "Documentação API"
+                  : language === "en"
+                  ? "API Docs"
+                  : "API ドキュメント"}
+              </Link>
+              <button
+                onClick={() => {
+                  setOpen(true);
+                  setMobileOpen(false);
+                }}
+                className="block w-full text-left text-gray-700 hover:text-red-600 font-medium transition-colors duration-200"
+              >
+                🌍 {language.toUpperCase()}
+              </button>
+            </div>
+          )}
         </Container>
       </header>
       {open && <LanguageModal setOpen={setOpen} open={open} />}

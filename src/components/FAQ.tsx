@@ -31,12 +31,7 @@ const FAQ: React.FC = () => {
               ? "Ask us anything!"
               : "何でもお尋ねください！"}
           </p>
-          <a
-            href="mailto:info@mapazzz.ao"
-            className="mt-3 block text-xl lg:text-4xl text-secondary font-semibold hover:underline text-center lg:text-left"
-          >
-            info@mapazzz.ao
-          </a>
+          
         </div>
 
         <div className="w-full lg:max-w-2xl mx-auto border-b">
