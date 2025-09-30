@@ -2,11 +2,11 @@
   "rewrites": [
     {
       "source": "/instu",
-      "destination": "https://burger-order-screen.vercel.app/"
+      "destination": "instu.ma-pa-zzz.tech"
     },
     {
       "source": "/instu/(.*)",
-      "destination": "https://burger-order-screen.vercel.app/$1"
+      "destination": "instu.ma-pa-zzz.tech"
     }
   ]
 }
