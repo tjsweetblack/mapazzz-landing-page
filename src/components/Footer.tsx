@@ -12,19 +12,22 @@ const Footer: React.FC = () => {
       privacy: "Política de Privacidade",
       docs: "Documentação da API",
       reports: "Relatórios",
-      zones: "Zonas de Risco"
+      zones: "Zonas de Risco",
+      deleteAccount: "Excluir Conta"
     },
     en: {
       privacy: "Privacy Policy",
       docs: "API Documentation", 
       reports: "Reports",
-      zones: "Risk Zones"
+      zones: "Risk Zones",
+      deleteAccount: "Delete Account"
     },
     jp: {
       privacy: "プライバシーポリシー",
       docs: "APIドキュメント",
       reports: "レポート",
-      zones: "リスクゾーン"
+      zones: "リスクゾーン",
+      deleteAccount: "アカウント削除"
     }
   };
 
@@ -58,6 +61,12 @@ const Footer: React.FC = () => {
             className="text-sm hover:text-gray-300 transition-colors duration-200"
           >
             {links.zones}
+          </Link>
+          <Link 
+            href="/delete-account" 
+            className="text-sm hover:text-gray-300 transition-colors duration-200"
+          >
+            {links.deleteAccount}
           </Link>
         </div>
       </div>
